@@ -1,0 +1,28 @@
+.container {
+    height: auto;
+    background: black;
+    color: white;
+    margin-top: 15em;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  h3,
+  h4 {
+    font-weight: 400;
+  }
+  
+  h4 {
+    color: silver;
+  }
+  
+  h4 span {
+    color: white;
+  }
+  
+  img{
+    height: 100px;
+    align-self: center;
+
+  }
+  
