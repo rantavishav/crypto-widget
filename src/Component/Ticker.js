@@ -1,24 +1,22 @@
 import "./Ticker.css";
-import axios from 'axios'
+
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/apiFetch/actions'
-import image from "../assets/images/BTC.png"
-
-
+import image from '../assets/images/BTC.png'
 export default function Ticker() {
 
+ 
   const dispatch = useDispatch();
  
-  //uesEffect to render data every 1sec from the API
+
   useEffect(()=>{
-            
-    const interval = setInterval(() => {
-      dispatch(fetchData)
-    }, 1000);                   //Can change the speed by which data is fetch from API, right now its 1sec
-    return () => clearInterval(interval)
-    
+  
+ 
+     dispatch(fetchData)
   },[])
+
+
 
   
   const data = useSelector(state => state.apiFetch); //Fetch data from the state
@@ -46,6 +44,8 @@ export default function Ticker() {
           </h4>
 
         </div>
+        <h1>Working</h1>
+
       </div>
     );
   }
